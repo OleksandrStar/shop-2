@@ -76,6 +76,17 @@ const Index = () => {
                         and style, ensuring that every project is executed effortlessly.</p>
                 </div>
             </div>
+            <div style={{width: '100%', height: '500px'}}>
+                <iframe
+                    title="Amazon YouTube Video"
+                    width="100%"
+                    height="100%"
+                    src="https://www.youtube.com/embed/OonBWevEND0"  // Replace with the actual video ID
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                ></iframe>
+            </div>
         </>
     );
 };

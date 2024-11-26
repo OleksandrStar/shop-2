@@ -29,6 +29,62 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    <style>
+      #IUAweather {min-width: 210px; width: 240px; position: relative;}
+      #IUAweather * {margin: 0; padding: 0;}
+      #IUAweather a, #IUAweather a:hover {border: none; text-decoration: underline; color: #00529c;}
+      #IUAweather .IUAweather_block {overflow: hidden; padding: 4px; font-family: Arial; font-size: 10px; background: #F6F6F6; border: 1px solid #00529c; color: #000000;}
+      #IUAweather .IUAweather_title {overflow: hidden; margin-top: -4px; font-size: 12px; font-weight: bold; height: 20px; line-height: 20px; color: #00529C;}
+      #IUAweather .IUAweather_title i {position: absolute; right: 4px; top: 2px; width: 36px; height: 14px; background: url(//i.i.ua/v2/logo/logo_small_14_black.png) no-repeat 0 0 transparent; opacity: .3;}
+      #IUAweather .IUAweather_content, #IUAweather .IUAweather_content:hover {display: block; background: #FFFFFF; padding: 4px; margin-bottom: 4px; text-decoration: none; color: inherit;}
+      #IUAweather .IUAweather_head_title {font-size: 12px; font-weight: bold;}
+      #IUAweather .IUAweather_item,
+      #IUAweather .IUAweather_head {padding: 4px 0;}
+      #IUAweather .IUAweather_item:last-child {padding-bottom: 0;}
+      #IUAweather .IUAweather_item {border-top: 1px dotted #DDD; font-size: 18px; font-family: Trebuchet MS;}
+      #IUAweather .IUAweather_item_title,
+      #IUAweather .IUAweather_item_data {display: inline-block; vertical-align: top; width: 48%; text-align: left;}
+      #IUAweather .IUAweather_item_data img {width: 24px; height: 24px;}
+    </style>
+    <div id="IUAweather">
+      <div class="IUAweather_block" id="IUAweatherBlock">
+        <h1 class="IUAweather_title" id="IUAweatherTitle">
+          <a href="//weather.i.ua" target="_blank" id="IUAweatherTitleLink">Погода</a><i></i>
+        </h1>
+        <a href="//weather.i.ua" target="_blank" class="IUAweather_content" id="IUAweatherContent">
+          <div class="IUAweather_head_title" id="city_name"></div>
+          <div class="IUAweather_head">
+            <span class="IUAweather_item_title" id="day_title"></span>
+            <span class="IUAweather_item_title" id="night_title"></span>
+          </div>
+          <div class="IUAweather_item">
+<span class="IUAweather_item_data" id="day_temp">
+<img src="">
+</span>
+            <span class="IUAweather_item_data" id="night_temp">
+<img src="">
+</span>
+          </div>
+        </a>
+        <a href="" id="IUAweatherLink">Прогноз погоди на неділю</a>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      var $container = document.getElementById("IUAweather");
+      $container.style.width = "240";
+      $container.querySelector(".IUAweather_block").style.backgroundColor = "rgb(238, 238, 238)";
+      $container.querySelector(".IUAweather_block").style.borderColor = "rgb(17, 102, 204)";
+      $container.querySelector(".IUAweather_block").style.color = "rgb(0, 0, 0)";
+      $container.querySelector(".IUAweather_content").style.backgroundColor = "rgb(255, 255, 255)";
+      $container.querySelector(".IUAweather_title").style.color = "rgb(17, 102, 204)";
+      $container.querySelector("#IUAweatherLink").style.color = "rgb(17, 102, 204)";</script>
+    <script type="text/javascript">
+      iWeatherCityId = 10101;
+      iWeatherLang = 1;
+      iWeatherEnc = 2;
+    </script>
+    <script src="https://i3.i.ua/js/i/weather_informer2.js" type="text/javascript" charset="windows-1251"></script>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.

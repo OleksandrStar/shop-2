@@ -57,6 +57,18 @@ const Index = () => {
                     time!
                 </p>
             </div>
+            <div style={{width: '100%', height: '500px'}}>
+                <iframe
+                    title="Google Map"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.994238395403!2d2.294350615674149!3d48.85884407928769!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e671d1e1a0b6d1%3A0x0!2zQW5kaXJlciBBcHBsZSBXYXkz!5e0!3m2!1sen!2sfr!4v1632109340951!5m2!1sen!2sfr"
+                    width="100%"
+                    height="100%"
+                    style={{border: 0}}
+                    allowFullScreen=""
+                    loading="lazy"
+                ></iframe>
+            </div>
+
         </div>
     );
 };
